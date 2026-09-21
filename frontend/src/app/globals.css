@@ -1,78 +1,18 @@
 @import "tailwindcss";
 
 :root {
-  --bg-primary: #0a0a0f;
-  --bg-secondary: #12121a;
-  --bg-card: #1a1a2e;
-  --accent-purple: #7c3aed;
-  --accent-blue: #2563eb;
-  --accent-cyan: #06b6d4;
-  --text-primary: #f1f5f9;
-  --text-secondary: #94a3b8;
-  --border: #2d2d4a;
+  --bg: #0d0d14;
+  --card: #16161f;
+  --border: #2a2a3a;
+  --text: #f0f0ff;
+  --muted: #7a7a9a;
+  --accent: #6c63ff;
+  --accent2: #00d4aa;
 }
 
-* { margin: 0; padding: 0; box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-body {
-  background-color: var(--bg-primary);
-  color: var(--text-primary);
-  min-height: 100vh;
-  overflow-x: hidden;
-}
-::-webkit-scrollbar { width: 6px; }
-::-webkit-scrollbar-track { background: var(--bg-primary); }
-::-webkit-scrollbar-thumb { background: var(--accent-purple); border-radius: 3px; }
+* { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body { background:var(--bg); color:var(--text); min-height:100vh; font-family:inherit; }
 
-.glow-purple { box-shadow: 0 0 20px rgba(124,58,237,0.4), 0 0 60px rgba(124,58,237,0.15); }
-
-@keyframes gradient-shift {
-  0%, 100% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-}
-@keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-10px); }
-}
-
-.animate-float { animation: float 3s ease-in-out infinite; }
-
-.gradient-text {
-  background: linear-gradient(135deg, #7c3aed, #2563eb, #06b6d4);
-  background-size: 200% auto;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  animation: gradient-shift 4s ease infinite;
-}
-
-.card-border {
-  border: 1px solid var(--border);
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
-}
-.card-border:hover {
-  border-color: #7c3aed66;
-  box-shadow: 0 0 30px rgba(124,58,237,0.1);
-}
-
-.mesh-bg {
-  background-image:
-    linear-gradient(rgba(124,58,237,0.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(124,58,237,0.05) 1px, transparent 1px);
-  background-size: 50px 50px;
-}
-
-.upload-zone {
-  border: 2px dashed #2d2d4a;
-  transition: all 0.3s ease;
-}
-.upload-zone:hover, .upload-zone.drag-over {
-  border-color: #7c3aed;
-  background: rgba(124,58,237,0.05);
-}
-.tab-active {
-  background: linear-gradient(135deg, #7c3aed, #2563eb);
-  color: white;
-}
-.tab-inactive { color: #94a3b8; }
-.tab-inactive:hover { color: #f1f5f9; background: rgba(255,255,255,0.05); }
+::-webkit-scrollbar { width:4px; }
+::-webkit-scrollbar-thumb { background:var(--accent); border-radius:4px; }
